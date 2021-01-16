@@ -17,7 +17,7 @@ const Header: React.FC = () => {
       <Flex h="100%" justify="center" color="white">
         <HStack spacing="18px">
           <Center w="100px" bg="blue.500">
-            <Link css={routerLinkBtn} to="/">hone</Link>
+            <Link css={routerLinkBtn} to="/home">home</Link>
           </Center>
           <Center w="100px" bg="blue.500">
             <Link css={routerLinkBtn} to="/about">about</Link>

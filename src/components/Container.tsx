@@ -4,6 +4,7 @@ import Header from './Header'
 import Home from './Home';
 import About from './About';
 import Contact from './Contact';
+import NoContents from './NoContents';
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,8 +24,11 @@ const Container: React.FC = () => {
           <Route path="/contact">
             <Contact text="this is contact" />
           </Route>
-          <Route path="*">
+          <Route path="/home">
             <Home text="this is home" />
+          </Route>
+          <Route path="*">
+            <NoContents />
           </Route>
         </Switch>
       </Router>
