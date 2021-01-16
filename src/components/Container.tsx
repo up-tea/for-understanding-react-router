@@ -4,11 +4,11 @@ import Header from './Header'
 import Home from './Home';
 import About from './About';
 import Contact from './Contact';
-import NoContents from './NoContents';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
 
 const Container: React.FC = () => {
@@ -28,7 +28,7 @@ const Container: React.FC = () => {
             <Home text="this is home" />
           </Route>
           <Route path="*">
-            <NoContents />
+            <Redirect to="/home" />
           </Route>
         </Switch>
       </Router>
