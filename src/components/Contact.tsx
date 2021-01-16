@@ -1,10 +1,13 @@
 import React from 'react'
 import { Box } from "@chakra-ui/react"
 
-const Contact = () => {
+type Props = {
+  text: string
+}
+const Contact: React.FC<Props> = ({text}) => {
   return (
-    <Box bg="green" color="white" h="100%">
-      this is contact component
+    <Box bg="tomato" h="100%" color="white">
+      {text}
     </Box>
   )
 }

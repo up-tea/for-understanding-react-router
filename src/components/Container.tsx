@@ -1,29 +1,30 @@
 import React from 'react'
 import { Grid } from "@chakra-ui/react"
 import Header from './Header'
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import Home from './Home';
-import About from './About';
-import Contact from './Contact';
 
 const Container: React.FC = () => {
+
   return (
     <Grid templateRows="88px 1fr" h="100vh" w="100%">
       <Router>
         <Header />
         <Switch>
-          <Route extract path="/">
-            <Home />
-          </Route>
           <Route path="/about">
-            <About />
+            <About text="this is about" />
           </Route>
           <Route path="/contact">
-            <Contact />
+            <Contact text="this is contact" />
+          </Route>
+          <Route path="*">
+            <Home text="this is home" />
           </Route>
         </Switch>
       </Router>
